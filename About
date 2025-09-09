@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<body>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title> Marvel Motors</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #f9f9f9;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+
+    .about-container {
+      max-width: 1000px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+      position: relative;
+    }
+
+    h1 {
+      color: #1a237e;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .info {
+      margin-bottom: 25px;
+      line-height: 1.8;
+    }
+
+    .toggle-section {
+      display: none;
+      background-color: #e8eaf6;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 15px;
+    }
+
+    button {
+      display: block;
+      margin: 20px auto;
+      padding: 12px 24px;
+      background-color: #1a237e;
+      color: #fff;
+      font-size: 16px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #0d133d;
+    }
+
+    .section-title {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #444;
+      border-left: 4px solid #1a237e;
+      padding-left: 10px;
+    }
+
+    ul {
+      padding-left: 20px;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    .sidebar {
+      position: fixed;
+      top: 0;
+      right: -320px;
+      width: 300px;
+      height: 100%;
+      background-color: #ffffff;
+      border-left: 2px solid #1a237e;
+      padding: 30px 20px;
+      box-shadow: -3px 0 8px rgba(0, 0, 0, 0.1);
+      transition: right 0.3s ease;
+      z-index: 999;
+    }
+
+    .sidebar.active {
+      right: 0;
+    }
+
+    .sidebar h3 {
+      margin-top: 0;
+      color: #1a237e;
+      margin-bottom: 15px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: #1a237e;
+      margin-bottom: 12px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+
+    .sidebar a:hover {
+      text-decoration: underline;
+    }
+
+    .hamburger {
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      background: none;
+      border: none;
+      font-size: 30px;
+      cursor: pointer;
+      z-index: 1000;
+      color: #1a237e;
+    }
+
+    .address {
+      font-size: 14px;
+      margin-bottom: 10px;
+    }
+  </style>
+</head>
+<body>
+
+  <button class="hamburger" onclick="toggleSidebar()">☰</button>
+
+  <div class="sidebar" id="sidebar">
+    <h3>📞 Contact</h3>
+    <a href="tel:9600760012">Show Number: 9600760012</a>
+    <h3>📍 Address</h3>
+    <p class="address">
+      Building No 32, Near to Vadeval Child Clinic,<br>
+      Kattabomman Street, Gandhi Nagar,<br>
+      Ganapathy-641006
+    </p>
+    <a href="https://maps.app.goo.gl/sZEwHSRWiTHhPhM3A" target="_blank">📍 Location</a>
+    <a href="https://www.instagram.com/marvelmotors6?igsh=a2I4dzQ2aXpzaWZ1" target="_blank">📷 Instagram</a>
+    <a href="https://youtube.com/shorts/REC7w1iL6Ek?si=lEU9_GXBTwiX84p8" target="_blank">▶️ YouTube</a>
+  </div>
+
+  <div class="about-container">
+    <h1>About Marvel Motors</h1>
+
+    <div class="info">
+      Car repair centre repairing engines, glass, and alloy wheels while providing services like detailing, restoration, and tuning for all vehicles.
+    </div>
+
+    <button onclick="toggleMore()">Overview</button>
+    <button onclick="toggleFullDetails()">View All Details</button>
+
+    <div class="toggle-section" id="moreInfo">
+      <div class="info">
+        <span class="section-title">🚘 Overview</span>
+        <p>Marvel Motors in Ganapathy, Coimbatore is a leading name in the Car Repair & Services industry. We offer a wide range of services including oil changes, brake repairs, diagnostics, and complete overhauls. With expert mechanics and flexible working hours, we deliver top-tier service with every visit.</p>
+      </div>
+    </div>
+
+    <div class="toggle-section" id="fullDetails">
+      <div class="info">
+        <span class="section-title">🏁 Establishment Details</span>
+        <p>Established in 2023, Marvel Motors has quickly earned a reputation for quality and reliability. Rated 4.4 by 45 customers, we’re located near Vadeval Child Clinic and known for our state-of-the-art tools and transparent approach to auto care.</p>
+
+        <span class="section-title">🛠 Services Offered</span>
+        <ul>
+          <li>Company Authorized Dealer Services</li>
+          <li>Oil Change & Engine Diagnostics</li>
+          <li>Glass & Alloy Wheel Repair</li>
+          <li>Full Body Painting & Tuning</li>
+          <li>Restoration and Customization</li>
+        </ul>
+
+        <span class="section-title">❓ Frequently Asked Questions</span>
+        <ul>
+          <li><strong>When should I take my car?</strong> — Any day between 9:30 AM - 9:00 PM (Sun: 10:00 AM - 2:00 PM).</li>
+          <li><strong>Warranty available?</strong> — Yes, on most services. Contact us for details.</li>
+          <li><strong>Do you deliver vehicles after service?</strong> — Yes, delivery is available on request.</li>
+          <li><strong>Do you repair all cars?</strong> — We service all major car types and brands.</li>
+          <li><strong>Do you provide car accessories?</strong> — Select accessories available. Please call for info.</li>
+        </ul>
+
+        <span class="section-title">📌 Summary</span>
+        <p>From diagnostics to full restoration, Marvel Motors in Ganapathy, Coimbatore is your go-to center for complete automotive care. Our commitment is to keep your car running perfectly while ensuring your comfort and satisfaction every step of the way.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function toggleMore() {
+      const section = document.getElementById("moreInfo");
+      section.style.display = (section.style.display === "block") ? "none" : "block";
+    }
+
+    function toggleFullDetails() {
+      const section = document.getElementById("fullDetails");
+      section.style.display = (section.style.display === "block") ? "none" : "block";
+    }
+
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      sidebar.classList.toggle("active");
+    }
+  </script>
+
+</body>
+</html>
